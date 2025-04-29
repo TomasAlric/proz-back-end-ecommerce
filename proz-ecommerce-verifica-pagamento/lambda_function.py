@@ -12,7 +12,7 @@ s3 = boto3.client('s3')
 sfn = boto3.client('stepfunctions')
 
 # Variável de ambiente do S3
-S3_BUCKET = os.environ['S3_BUCKET']
+S3_BUCKET = os.environ['S3_BUCKET'].strip()
 
 # Função principal da Lambda
 def lambda_handler(event, _context):
